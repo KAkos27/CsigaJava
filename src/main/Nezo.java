@@ -1,14 +1,14 @@
-
 package main;
 
 public class Nezo {
+
     private static String fogadas;
 
-    public int setFogadas(){
+    public int setFogadas() {
         return 1;
     }
-    
-    public String getFogadas(){
+
+    public String getFogadas() {
         return "";
     }
 }
