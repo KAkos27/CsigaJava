@@ -16,9 +16,12 @@ public class Csiga {
         return szin;
     }
 
-    public void setLepes() {
+    public void setLepes(boolean gyorsitott) {
         Random rnd = new Random();
-        lepes = rnd.nextInt(3);
+        lepes = rnd.nextInt(4);
+        if (gyorsitott) {
+            lepes *= 2;
+        }
     }
 
     public int getLepes() {

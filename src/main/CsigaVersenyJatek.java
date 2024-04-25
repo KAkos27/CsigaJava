@@ -1,11 +1,14 @@
 package main;
 
+import java.util.Random;
+
 public class CsigaVersenyJatek extends Jatek {
 
     private static final int korokSzama = 5;
 
     @Override
     public void start() {
+        Random rnd = new Random();
         System.out.println("Csigaverseny elindult");
 
         Csiga p = new Csiga();
@@ -16,30 +19,40 @@ public class CsigaVersenyJatek extends Jatek {
         z.setSzin("Z", "\033[0;32m");
         k.setSzin("K", "\033[0;34m");
 
-        Nezo n = new Nezo();
-        n.setFogadas();
-        String fogadas = n.getFogadas();
-
+//        Nezo n = new Nezo();
+//        n.setFogadas();
+//        String fogadas = n.getFogadas();
         String pSzin = p.getSzin();
         String zSzin = z.getSzin();
         String kSzin = k.getSzin();
 
         for (int i = 1; i < korokSzama + 1; i++) {
-            p.setLepes();
+            int gyorsito = rnd.nextInt(1, 6);
+            int melyikCsiga = 4;
+            if (gyorsito == 1) {
+                melyikCsiga = rnd.nextInt(1, 4);
+                System.out.printf("*A %d. csiga begyorsult!*\n", melyikCsiga);
+            }
+
+            boolean pGyorsitott = melyikCsiga == 1;
+            boolean zGyorsitott = melyikCsiga == 2;
+            boolean kGyorsitott = melyikCsiga == 3;
+
+            p.setLepes(pGyorsitott);
             int pLepes = p.getLepes();
             p.setMegtett(pLepes);
             System.out.printf("(%d): %s lépett: %d-at/et | eddig megtett: %d\n", i, pSzin, pLepes, p.getMegtett());
 
-            z.setLepes();
+            z.setLepes(zGyorsitott);
             int zLepes = z.getLepes();
             z.setMegtett(zLepes);
             System.out.printf("(%d): %s lépett: %d-at/et | eddig megtett: %d\n", i, zSzin, zLepes, z.getMegtett());
 
-            k.setLepes();
+            k.setLepes(kGyorsitott);
             int kLepes = k.getLepes();
             k.setMegtett(kLepes);
             System.out.printf("(%d): %s lépett: %d-at/et | eddig megtett: %d\n", i, kSzin, kLepes, k.getMegtett());
-            System.out.println("-----------------------------------------------------------------");
+            System.out.println("------------------------------------------------");
         }
 
     }
