@@ -7,9 +7,9 @@ public class JatekIndito {
         Jatek kitalalos = new KitalalosJatek();
         Jatek verseny = new CsigaVersenyJatek();
 
-        Jatek[] jatekok = {kitalalos, verseny, new Jatek()};
+        Jatek[] jatekok = {kitalalos, verseny};
         for (Jatek jatek : jatekok) {
-           jatek.start();
+            jatek.start();
         }
     }
 }

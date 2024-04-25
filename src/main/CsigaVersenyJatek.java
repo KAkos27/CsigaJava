@@ -16,8 +16,13 @@ public class CsigaVersenyJatek extends Jatek {
         z.setSzin("Z", "\033[0;32m");
         k.setSzin("K", "\033[0;34m");
 
-        System.out.println(p.getSzin());
-        System.out.println(z.getSzin());
-        System.out.println(k.getSzin());
+        String pSzin = p.getSzin();
+
+        for (int i = 1; i < korokSzama + 1; i++) {
+            p.setLepes();
+            int pLepes = p.getLepes();
+            p.setMegtett(pLepes);
+            System.out.printf("(%d): %s lépett: %d-at/et | eddig megtett: %d\n", i, pSzin, pLepes, p.getMegtett());
+        }
     }
 }

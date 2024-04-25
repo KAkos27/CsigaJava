@@ -9,7 +9,7 @@ public class Csiga {
     private int megtett;
 
     public void setSzin(String nev, String szinkod) {
-        szin = szinkod + nev;
+        szin = szinkod + nev + "\u001B[30m";
     }
 
     public String getSzin() {
