@@ -1,6 +1,8 @@
 package main;
 
-public class CsigaVersenyJatek extends Jatek{
+public class CsigaVersenyJatek extends Jatek {
+
+    private static final int korokSzama = 5;
 
     @Override
     public void start() {
