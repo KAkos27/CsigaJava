@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class CsigaVersenyJatek extends Jatek {
 
-    private static final int korokSzama = 5;
+    private static final int KOROK_SZAMA = 5;
+    private static final Random rnd = new Random();
 
     @Override
     public void start() {
-        Random rnd = new Random();
         System.out.println("Csigaverseny elindult");
 
         Csiga p = new Csiga();
@@ -26,7 +26,7 @@ public class CsigaVersenyJatek extends Jatek {
         String zSzin = z.getSzin();
         String kSzin = k.getSzin();
 
-        for (int i = 1; i < korokSzama + 1; i++) {
+        for (int i = 1; i < KOROK_SZAMA + 1; i++) {
             int gyorsito = rnd.nextInt(1, 6);
             int melyikCsiga = 4;
             if (gyorsito == 1) {

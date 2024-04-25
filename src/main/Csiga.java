@@ -7,6 +7,7 @@ public class Csiga {
     private String szin;
     private int lepes;
     private int megtett;
+    private static final Random rnd = new Random();
 
     public void setSzin(String nev, String szinkod) {
         szin = szinkod + nev + "\u001B[30m";
@@ -17,7 +18,6 @@ public class Csiga {
     }
 
     public void setLepes(boolean gyorsitott) {
-        Random rnd = new Random();
         lepes = rnd.nextInt(4);
         if (gyorsitott) {
             lepes *= 2;
