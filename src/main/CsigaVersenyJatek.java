@@ -41,18 +41,18 @@ public class CsigaVersenyJatek extends Jatek {
             p.setLepes(pGyorsitott);
             int pLepes = p.getLepes();
             p.setMegtett(pLepes);
-            System.out.printf("(%d): %s lépett: %d-at/et | eddig megtett: %d\n", i, pSzin, pLepes, p.getMegtett());
+            System.out.printf("(%d): %s lépett: %d | eddig megtett: %d\n", i, pSzin, pLepes, p.getMegtett());
 
             z.setLepes(zGyorsitott);
             int zLepes = z.getLepes();
             z.setMegtett(zLepes);
-            System.out.printf("(%d): %s lépett: %d-at/et | eddig megtett: %d\n", i, zSzin, zLepes, z.getMegtett());
+            System.out.printf("(%d): %s lépett: %d | eddig megtett: %d\n", i, zSzin, zLepes, z.getMegtett());
 
             k.setLepes(kGyorsitott);
             int kLepes = k.getLepes();
             k.setMegtett(kLepes);
-            System.out.printf("(%d): %s lépett: %d-at/et | eddig megtett: %d\n", i, kSzin, kLepes, k.getMegtett());
-            System.out.println("------------------------------------------------");
+            System.out.printf("(%d): %s lépett: %d | eddig megtett: %d\n", i, kSzin, kLepes, k.getMegtett());
+            System.out.println("---------------------------------------");
         }
 
     }
