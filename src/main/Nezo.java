@@ -8,7 +8,7 @@ public class Nezo {
 
     public void setFogadas() {
         Scanner src = new Scanner(System.in);
-        System.out.println("Melyik csigára fogadsz: (p,z,k) ");
+        System.out.println("Melyik csigára fogadsz: (P, Z, K) ");
         fogadas = src.nextLine();
     }
 
