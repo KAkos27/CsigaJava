@@ -1,13 +1,34 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package main;
 
-/**
- *
- * @author KosztolányiÁkos(SZOF
- */
 public class Csiga {
-    
+
+    private String szin;
+    private int lepes;
+    private int megtett;
+
+    public void setSzin() {
+
+    }
+
+    ;
+    public String getSzin() {
+        return "";
+    }
+
+    ;
+    public void setLepes() {
+
+    }
+
+    public int getLepes() {
+        return 1;
+    }
+
+    public void setMegtett() {
+
+    }
+
+    public int getMegtett() {
+        return 1;
+    }
 }
