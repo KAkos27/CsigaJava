@@ -19,9 +19,6 @@ public class CsigaVersenyJatek extends Jatek {
         z.setSzin("Z", "\033[0;32m");
         k.setSzin("K", "\033[0;34m");
 
-//        Nezo n = new Nezo();
-//        n.setFogadas();
-//        String fogadas = n.getFogadas();
         String pSzin = p.getSzin();
         String zSzin = z.getSzin();
         String kSzin = k.getSzin();
